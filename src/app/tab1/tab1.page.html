@@ -1,0 +1,32 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Shape Generator
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+  <svg width="100%" height="100%" viewBox="0 0 480 480" itemtype="background" xmlns="http://www.w3.org/2000/svg"
+    xmlns:xlink="http://www.w3.org/1999/xlink" style='contain: strict; stroke-width: 0px; background-color: white;'>
+
+    <svg:path [ngStyle]="pathStyle" [attr.d]="pathD"></svg:path>
+  
+  </svg>
+
+  <ion-footer>
+
+      <ion-button expand="full" (click)="generateLinearShape()">Generate Linear Shape</ion-button>
+
+      <ion-button expand="full" (click)="generateCurvyShape()">Generate Curvy Shape</ion-button>
+
+      <ion-button expand="full" (click)="randomizeStyle()">Randomize Style</ion-button>
+
+      <ion-item>
+        <ion-range min="0.05" max="2" step="0.05" color="secondary" class="rangeA" [(ngModel)]="vertixCountFactor">
+          <ion-label slot="start">0.05</ion-label>
+          <ion-label slot="end">2</ion-label>
+        </ion-range>
+      </ion-item>
+
+  </ion-footer>
